@@ -1,0 +1,92 @@
+<html>
+<head>
+    <title>ask bong</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/58b37045c6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="app.css">
+    <script async src="https://cse.google.com/cse.js?cx=606dbbcccf8294dd1"></script>
+</head>
+<body>
+    
+    
+<div class="container"> 
+    
+    <div class="img">
+        <img src="neil_sm.png">
+    </div>
+    <!-- <div class="row">
+        <h4 class="display-10 text-center">ask bong</h4>
+    </div> -->
+<div class="row">
+    <form method="dialog">
+<input
+    type="text"
+    placeholder=""
+    required
+/>
+<button id="submitbutton">ask bong</button>
+    </form>
+
+</div>
+<div id="results" class="results"></div>
+
+
+
+</script>
+
+</div>
+<script>
+
+  // Define an array of words
+
+  const nouns = ["AHHHHHHH", "apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "big thing", "pocket", "dog", "cat", "dolphin", "goose", "ice cream", "horse", "bobcat", "sled", "house","wombat"];
+  const verbs = ["swim","fly","drive","hike","ski","snowboard","drink","eat","choke","walk","open","speak","chew","bike","create","jump","scream","smell","taste","think","twerk","dance","sleep"];
+  const adjs = ["green","blue","red","orange","yellow","grey","black","white","brown","dull","ugly","bright","sparkly","shiny","glittery","beautiful","horrible","quickly","slowly"];
+  const preps = ["on","over","under","in","behind","beside","above","below","against","aloft","around","before","between","beyond","from","onto","past"];
+  const dets = ["a","the","each", "some", "which", "this", "one","two","five","fifty","forty-seven","a million", "an infinite","those","these"];
+
+
+  // Get a reference to the button element
+
+  const submitbutton = document.getElementById("submitbutton");
+
+
+
+  // Function to generate a random word
+
+  function generateResults() {
+
+    const indexA = Math.floor(Math.random() * dets.length);
+    const indexB = Math.floor(Math.random() * adjs.length);
+    const indexC = Math.floor(Math.random() * nouns.length);
+    const indexD = Math.floor(Math.random() * verbs.length);
+    const indexE = Math.floor(Math.random() * preps.length);
+    const indexF = Math.floor(Math.random() * dets.length);
+    const indexG = Math.floor(Math.random() * nouns.length);
+
+    const wordA = dets[indexA];
+    const wordB = adjs[indexB];
+    const wordC = nouns[indexC];
+    const wordD = verbs[indexD];
+    const wordE = preps[indexE];
+    const wordF = dets[indexF];
+    const wordG = nouns[indexG];
+
+    document.getElementById("results").textContent = `${wordA} ${wordB} ${wordC} ${wordD} ${wordE} ${wordF} ${wordG}`;
+
+  }
+
+
+
+  // Attach an event listener to the button
+
+  submitbutton.addEventListener("click", generateResults);
+
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+</body>
+</html>
